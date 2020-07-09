@@ -1,7 +1,7 @@
 import * as Sentry from '@sentry/node'
-
+console.log(process.env.NEXT_PUBLIC_SENTRY_DSN)
 Sentry.init({
-  enabled: process.env.NODE_ENV === 'production',
+  // enabled: 'production',
   dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
 })
 
