@@ -8,7 +8,8 @@ const MyError = async ({ statusCode, hasGetInitialPropsRun, err }) => {
     // err via _app.js so it can be captured
     Sentry.captureException(err)
     await Sentry.flush(2000);
-  }
+  } 
+  
 
   return <NextErrorComponent statusCode={statusCode} />
 }
